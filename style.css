@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 60vh;
+    background: linear-gradient(to bottom, rgba(16, 118, 185, 0.5), rgba(12, 12, 12, 0.9)), url(images/globe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0% 300%;
+}
+
+h1 {
+    color: white;
+    font-size: 3.5rem;
+    letter-spacing: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.feedback {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 0.3rem;
+}
+
+.word {
+    color: red;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.count {
+    color: limegreen;
+    font-style: oblique;
+    font-size: 2rem;
+}
+
+.btn1, .btn2, .btn3 {
+    outline: none;
+    border: none;
+    background: #09ccda;
+    color: white;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.btn2 {
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+}
+
+.btn1:hover, .btn2:hover, .btn3:hover {
+    background: #0da1a1;
+}
+
+.active {
+    background: #05a3a3;
+}
+
+.inputArea {
+    position: relative;
+    left: 25%;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+input {
+    outline: none;
+    width: 45%;
+    border-radius: 2.5rem; 
+    border: 2px solid cadetblue;
+    padding: 0.9rem;
+    font-size: 1.5rem;
+}
+
+input::placeholder {
+    text-align: center;
+}
+
+input[type="text"] {
+ padding-left: 1.2rem;
+}
+
+.search {
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+main {
+    margin: 5rem;
+}
+
+.wrapper {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /* grid-template-columns: auto auto auto auto auto auto; */
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 10px;
+    column-gap: 30px;
+ } 
+
+ .imageWrapper {
+    height: 18vh;
+    width: 11vw;
+ }
+
+.image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(16, 118, 185, 0.5), rgba(12, 12, 12, 0.3)), url(/images/map_image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.text {
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+/* Media query for tab */
+@media (max-width: 750px) {
+    h1 {
+       font-size: 2.5rem;
+    }
+    .subtitle {
+       margin-top: 5px;
+       font-size: 1.5rem;
+    }
+   .feedback {
+       font-size: 1.5rem;
+   }
+   .word {
+       font-size: 1.8rem;
+   }
+   .count {
+       font-size: 1.8rem;
+   }
+   .btn1, .btn2, .btn3 {
+       padding: 1.2rem;
+       font-size: 1rem;
+   }
+   input {
+       padding: 0.7rem;
+   }
+   .search {
+       position: absolute;
+       top: 18%;
+   }
+   
+   .wrapper {
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+   }
+   .imageWrapper {
+       width: 15vw;
+   }
+}
+
+/* Media query for mobile */
+@media (max-width: 600px) {
+     h1 {
+        font-size: 2rem;
+     }
+     .subtitle {
+        margin-top: 5px;
+        font-size: 1.3rem;
+     }
+    .feedback {
+        font-size: 1.2rem;
+    }
+    .word {
+        font-size: 1.5rem;
+    }
+    .count {
+        font-size: 1.5rem;
+    }
+    .btn1, .btn2, .btn3 {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+    input {
+        padding: 0.5rem;
+    }
+    .search {
+        position: absolute;
+        top: 15%;
+    }
+    
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .imageWrapper {
+        width: 20vw;
+    }
+}
