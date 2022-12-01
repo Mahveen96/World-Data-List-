@@ -240,4 +240,7 @@ main {
     .imageWrapper {
         width: 20vw;
     }
+    .text {
+    font-size: 1rem;
+    }
 }
